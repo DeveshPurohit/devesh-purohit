@@ -43,7 +43,7 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/devesh-purohit-67266810a",
   github: "https://github.com/DeveshPurohit",
   summary:
-    "Results-driven Software Engineer with 3+ years building scalable web applications using Next.js, React.js, TypeScript, and Node.js. Proven track record of improving page load speeds by 30%, increasing user engagement by 200%, and delivering production-ready features.",
+    "Results-driven Software Engineer with 3+ years building scalable web applications using Next.js, React.js, TypeScript, and Node.js. Proven track record of improving page load speeds by 30%, increasing user engagement by 100%, and delivering production-ready features.",
   yearsOfExperience: 3,
   metrics: [
     { value: "3+", label: "Years Experience" },
