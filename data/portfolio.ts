@@ -48,7 +48,7 @@ export const personalInfo: PersonalInfo = {
   metrics: [
     { value: "3+", label: "Years Experience" },
     { value: "30%", label: "Faster Load Times" },
-    { value: "200%", label: "User Engagement" },
+    { value: "100%", label: "User Engagement" },
     { value: "95+", label: "Lighthouse Score" },
   ],
 };
@@ -100,7 +100,7 @@ export const experiences: Experience[] = [
     points: [
       "Built scalable web applications using Next.js, React.js, Strapi CMS, and PostgreSQL handling 5K+ concurrent users",
       "Reduced application loading time by 25% through code splitting, lazy loading, and performance optimization",
-      "Increased average user session time from 30 to 90 seconds (200% improvement) with engaging UI features",
+      "Increased average user session time from 30 to 90 seconds (100% improvement) with engaging UI features",
     ],
   },
 ];
