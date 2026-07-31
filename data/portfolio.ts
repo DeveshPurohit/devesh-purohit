@@ -56,9 +56,9 @@ export const personalInfo: PersonalInfo = {
 export const experiences: Experience[] = [
   {
     role: "Frontend Developer",
-    company: "Febstone",
+    company: "CodersBrain",
     type: "Full-time",
-    period: "Feb 2026 – Present",
+    period: "Mar 2026 – Present",
     location: "Remote",
     points: [
       "Developed and maintained responsive, high-performance frontend interfaces using Next.js, TypeScript, and Tailwind CSS",
@@ -70,7 +70,7 @@ export const experiences: Experience[] = [
     role: "Frontend Developer",
     company: "Taskar",
     type: "Full-time",
-    period: "Nov 2024 – Jan 2026",
+    period: "Nov 2024 – Feb 2026",
     location: "On-site",
     points: [
       "Developed responsive UIs using Next.js 15, TypeScript, and Tailwind CSS, serving 10K+ monthly active users",
