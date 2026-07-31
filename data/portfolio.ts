@@ -80,22 +80,10 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    role: "Fullstack Developer",
-    company: "Self-Employed",
-    type: "Freelance",
-    period: "Jun 2024 – Oct 2024",
-    location: "Remote",
-    points: [
-      "Developed e-commerce platform using Next.js, Tailwind CSS, and MySQL for warehouse inventory management",
-      "Implemented role-based access control system for store managers to efficiently view and order stock",
-      "Improved inventory management efficiency by 25% through automated stock tracking and real-time updates",
-    ],
-  },
-  {
     role: "Full Stack Developer",
     company: "buzzproof.io",
     type: "Full-time",
-    period: "May 2023 – May 2024",
+    period: "May 2023 – Oct 2024",
     location: "Remote",
     points: [
       "Built scalable web applications using Next.js, React.js, Strapi CMS, and PostgreSQL handling 5K+ concurrent users",
