@@ -31,6 +31,10 @@ function ProjectCard({
   index: number;
 }) {
   const [hovered, setHovered] = useState(false);
+  const href = project.live ?? project.github;
+  const hrefLabel = project.live
+    ? `Open ${project.title} live demo`
+    : `Open ${project.title} on GitHub`;
 
   return (
     <motion.div
@@ -40,13 +44,22 @@ function ProjectCard({
       className="relative group h-full"
     >
       <motion.div
-        className="relative flex flex-col h-full p-6 rounded-2xl border border-white/[0.05] bg-white/[0.02] overflow-hidden card-glow"
+        className={`relative flex flex-col h-full p-6 rounded-2xl border border-white/[0.05] bg-white/[0.02] overflow-hidden card-glow ${href ? "cursor-pointer" : ""}`}
         whileHover={{
           scale: 1.02,
           y: -5,
           transition: { duration: 0.3, ease: "easeOut" },
         }}
       >
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 z-10 rounded-2xl"
+            aria-label={hrefLabel}
+          />
+        )}
         {/* Gradient background wash on hover */}
         <div
           className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-[0.055] transition-opacity duration-500`}
@@ -58,7 +71,7 @@ function ProjectCard({
         {/* Subtle corner glare */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
-        <div className="relative z-10 flex flex-col h-full">
+        <div className="relative z-0 flex flex-col flex-1">
           {/* Header row */}
           <div className="flex items-start justify-between mb-4">
             <div>
@@ -71,13 +84,16 @@ function ProjectCard({
                 {project.title}
               </h3>
             </div>
-            <motion.div
-              animate={{ rotate: hovered ? 45 : 0, opacity: hovered ? 0.7 : 0.2 }}
-              transition={{ duration: 0.25 }}
-              className="text-white mt-1 shrink-0"
-            >
-              <ArrowUpRight size={18} />
-            </motion.div>
+            {href && (
+              <motion.div
+                animate={{ rotate: hovered ? 45 : 0, opacity: hovered ? 0.7 : 0.2 }}
+                transition={{ duration: 0.25 }}
+                className="text-white mt-1 shrink-0"
+                aria-hidden
+              >
+                <ArrowUpRight size={18} />
+              </motion.div>
+            )}
           </div>
 
           {/* Description */}
@@ -111,41 +127,39 @@ function ProjectCard({
               </span>
             ))}
           </div>
+        </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-4 mt-auto pt-1 border-t border-white/[0.05]">
-            {project.github && (
-              <motion.a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-[11px] text-white/35 hover:text-white transition-colors duration-200"
-                whileHover={{ x: 1 }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <GitHubIcon size={12} />
-                GitHub
-              </motion.a>
-            )}
-            {project.live && (
-              <motion.a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-[11px] text-white/35 hover:text-white transition-colors duration-200"
-                whileHover={{ x: 1 }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <ExternalLink size={12} />
-                Live Demo
-              </motion.a>
-            )}
-            {!project.github && !project.live && (
-              <span className="text-[11px] text-white/20 italic">
-                Private repository
-              </span>
-            )}
-          </div>
+        {/* Links sit above the card overlay so they stay independently clickable */}
+        <div className="relative z-20 flex items-center gap-4 mt-auto pt-1 border-t border-white/[0.05]">
+          {project.github && (
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[11px] text-white/35 hover:text-white transition-colors duration-200"
+              whileHover={{ x: 1 }}
+            >
+              <GitHubIcon size={12} />
+              GitHub
+            </motion.a>
+          )}
+          {project.live && (
+            <motion.a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[11px] text-white/35 hover:text-white transition-colors duration-200"
+              whileHover={{ x: 1 }}
+            >
+              <ExternalLink size={12} />
+              Live Demo
+            </motion.a>
+          )}
+          {!project.github && !project.live && (
+            <span className="text-[11px] text-white/20 italic">
+              Private repository
+            </span>
+          )}
         </div>
       </motion.div>
     </motion.div>

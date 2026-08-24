@@ -99,7 +99,7 @@ export const projects: Project[] = [
     description:
       "Asset management system with secure authentication, drag-and-drop uploads, and real-time previews — achieving a 95+ Lighthouse score.",
     tech: ["Next.js 15", "TypeScript", "Tailwind CSS", "Appwrite"],
-    github: "https://github.com/DeveshPurohit",
+    github: "https://github.com/DeveshPurohit/sky-store",
     live: "https://skystore-gamma.vercel.app",
     highlights: [
       "95+ Lighthouse performance score",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     description:
       "Real-time video conferencing platform supporting 100+ participants with screen sharing, chat, and meeting recording.",
     tech: ["Next.js 14", "Clerk", "Stream SDK", "WebRTC", "TypeScript"],
-    github: "https://github.com/DeveshPurohit",
+    github: "https://github.com/DeveshPurohit/video_calling_app",
     live: "https://xoom-nine.vercel.app/",
     highlights: [
       "100+ concurrent participants support",
@@ -126,7 +126,14 @@ export const projects: Project[] = [
     title: "OQART",
     description:
       "Full-featured e-commerce platform with a personalized recommendation engine, secure payment gateways, and role-based access control.",
-    tech: ["Next.js 16", "React.js 19", "TypeScript", "Tailwind CSS", "Redux", "React Query"],
+    tech: [
+      "Next.js 16",
+      "React.js 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "React Query",
+    ],
     live: "https://oqart.com",
     highlights: [
       "Full-featured e-commerce storefront",
@@ -152,7 +159,14 @@ export const projects: Project[] = [
     title: "Medinos",
     description:
       "Quick-commerce medicine delivery app with real-time inventory, seamless checkout, and an intuitive user experience built for speed.",
-    tech: ["Next.js 15", "React.js 18", "TypeScript", "Tailwind CSS", "Redux", "React Query"],
+    tech: [
+      "Next.js 15",
+      "React.js 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "React Query",
+    ],
     highlights: [
       "Quick-commerce medicine delivery platform",
       "Real-time inventory management system",
