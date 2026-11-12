@@ -56,7 +56,7 @@ export const personalInfo: PersonalInfo = {
 export const experiences: Experience[] = [
   {
     role: "Frontend Developer",
-    company: "CodersBrain",
+    company: "Febstone",
     type: "Full-time",
     period: "Mar 2026 – Present",
     location: "Remote",
